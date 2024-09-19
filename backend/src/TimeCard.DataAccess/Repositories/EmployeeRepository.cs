@@ -20,9 +20,18 @@ public class EmployeeRepository : IEmployeeRepository
 
     public async Task<bool> CreateEmployeeAsync(Employee emp)
     {
+        bool result;
+
         await _dataAccess.Employees.AddAsync(emp);
 
-        return true;
+        result = await _dataAccess.SaveChangesAsync() > 0;
+
+        if (result)
+        {
+            return result;
+        }
+
+        return result;
     }
 
     public async Task<Employee> GetJobCardAsync(int empId)
