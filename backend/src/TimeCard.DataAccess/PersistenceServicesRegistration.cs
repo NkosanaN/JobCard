@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using TimeCard.Persistence.Repositories.Interface;
 using TimeCard.Persistence.Repositories;
 using TimeCard.DataAccess.Interface;
+using TimeCard.Persistence.DbInitializer;
 
 namespace TimeCard.Persistence;
 
@@ -18,6 +19,8 @@ public static class PersistenceServicesRegistration
 
         srv.AddScoped<IJobCardRepository, JobCardRepository>();
         srv.AddScoped<IJobRepository, JobRepository>();
+        srv.AddScoped<IEmployeeRepository, EmployeeRepository>();
+        srv.AddScoped<IDbInitializer, DbInitializer.DbInitializer>();
 
         return srv;
     }

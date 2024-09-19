@@ -6,7 +6,7 @@ public interface IJobRepository
 {
     Task<List<Job>> GetJobsAsync();
 
-    Task CreateJobAsync(Job job);
+    Task<bool> CreateJobAsync(Job job);
 
-    Task<Job> GetJobAsync(string JobId);
+    Task<List<Job>> GetJobAsync(string JobId);
 }

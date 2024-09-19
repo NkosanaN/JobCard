@@ -11,5 +11,5 @@ public class Job
     public string ClientName { get; set; }
     public string ClientPhone { get; set; }
     public string ClientContactName { get; set; }
-    public List<JobCard> JobCards { get; set; }
+    public List<JobCard>? JobCards { get; set; }
 }

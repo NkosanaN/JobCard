@@ -14,5 +14,6 @@ public class DataContext : DbContext
 
     public DbSet<Job> Jobs { get; set; }
     public DbSet<JobCard> JobCards { get; set; }
+    public DbSet<Employee> Employees { get; set; }
 
 }
