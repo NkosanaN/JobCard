@@ -9,7 +9,7 @@ Time Card is project that is used to track job card.
     
 ### To spin up the backend api project Run ###
  * Run docker compose cmd at the root folder of backend project it will create sqlserver + api
- * C:\dev\TimeCard\backend> ```` docker compose up --build ````
+ * C:\dev\backend> ```` docker compose up --build ````
  * ```` docker compose up --build ````
  * give it some time to spin-up containers
  * After navigate to swagger UI
